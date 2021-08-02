@@ -1,0 +1,264 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Medical Report System\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-31 23:57+0000\n"
+"PO-Revision-Date: 2021-08-02 03:49+0000\n"
+"Last-Translator: Rafael dos Santos\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8\n"
+"X-Domain: wp-medical-report-system"
+
+#: public/class-wp-medical-report-system-public.php:227
+msgid " is too large!"
+msgstr " é muito grande!"
+
+#: public/class-wp-medical-report-system-public.php:287
+#, php-format
+msgid "<span class=\"tag is-danger\">%s</span>"
+msgstr ""
+
+#: public/class-wp-medical-report-system-public.php:296
+#, php-format
+#| msgid "<div class=\"bg-success\">%d files added successfully!</div>"
+msgid "<span class=\"tag is-success\">%d files added successfully!</span>"
+msgstr ""
+"<span class=\"tag is-success\"><b>%d</b> &nbsp; exame(s) enviado(s)!</span> "
+"&nbsp; 🎉"
+
+#: admin/class-wp-medical-report-system-admin.php:119
+msgid "Add New"
+msgstr "Adicionar"
+
+#: admin/class-wp-medical-report-system-admin.php:118
+msgid "Add New Medical Report"
+msgstr "Adicionar Novo Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:199
+msgid "Add New Type"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:204
+msgid "Add or remove types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:117
+msgid "All Medical Reports"
+msgstr "Todos os Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:195
+msgid "All Types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:205
+msgid "Choose from the most used"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:121
+msgid "Edit Medical Report"
+msgstr "Editar Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:200
+msgid "Edit Type"
+msgstr ""
+
+#: public/class-wp-medical-report-system-public.php:153
+msgid "Exam Date"
+msgstr "Data / Hora da Realização"
+
+#: public/class-wp-medical-report-system-public.php:124
+msgid "Exam Type"
+msgstr "Tipo / Nome"
+
+#: admin/class-wp-medical-report-system-admin.php:128
+msgid "Featured Image"
+msgstr "Imagem Destaque"
+
+#: public/class-wp-medical-report-system-public.php:159
+msgid "Files"
+msgstr "Arquivos"
+
+#: admin/class-wp-medical-report-system-admin.php:136
+msgid "Filter Medical Reports list"
+msgstr "Filtrar lista de Exames"
+
+#. Author URI of the plugin
+msgid "https://rafael.business"
+msgstr "https://rafael.business"
+
+#. URI of the plugin
+msgid "https://rafael.work/plugin/wp-medical-report-system"
+msgstr "https://rafael.work/plugin/wp-medical-report-system"
+
+#: admin/class-wp-medical-report-system-admin.php:132
+msgid "Insert into Medical Report"
+msgstr "Inserir no Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:113
+#: admin/class-wp-medical-report-system-admin.php:157
+msgid "Medical Report"
+msgstr "Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:114
+msgid "Medical Report Archives"
+msgstr "Arquivos de Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:115
+msgid "Medical Report Attributes"
+msgstr "Atributos de Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:158
+msgid "Medical Report System"
+msgstr "Sistema de Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:112
+msgid "Medical Reports"
+msgstr "Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:134
+msgid "Medical Reports list"
+msgstr "Lista de Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:135
+msgid "Medical Reports list navigation"
+msgstr "Navegação na lista de Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:120
+msgid "New Medical Report"
+msgstr "Novo Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:198
+msgid "New Type Name"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:209
+msgid "No types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:208
+msgid "Not Found"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:126
+msgid "Not found"
+msgstr "Nada encontrado"
+
+#: admin/class-wp-medical-report-system-admin.php:127
+msgid "Not found in Trash"
+msgstr "Nada encontrado na lixeira"
+
+#: admin/class-wp-medical-report-system-admin.php:116
+msgid "Parent Medical Report:"
+msgstr "Exame Pai"
+
+#: admin/class-wp-medical-report-system-admin.php:196
+msgid "Parent Type"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:197
+msgid "Parent Type:"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:206
+msgid "Popular Types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:110
+msgctxt "Post Type General Name"
+msgid "Medical Reports"
+msgstr "Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:111
+msgctxt "Post Type Singular Name"
+msgid "Medical Report"
+msgstr "Exame"
+
+#. Author of the plugin
+msgid "Rafael Business"
+msgstr "Rafael Business"
+
+#: admin/class-wp-medical-report-system-admin.php:130
+msgid "Remove featured image"
+msgstr "Remover imagem destaque"
+
+#: admin/class-wp-medical-report-system-admin.php:125
+msgid "Search Medical Report"
+msgstr "Buscar Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:207
+msgid "Search Types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:203
+msgid "Separate types with commas"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:129
+msgid "Set featured image"
+msgstr "Escolher imagem destaque"
+
+#: admin/class-wp-medical-report-system-admin.php:192
+msgctxt "Taxonomy General Name"
+msgid "Types"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:193
+msgctxt "Taxonomy Singular Name"
+msgid "Type"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:194
+msgid "Type"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:210
+msgid "Types list"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:211
+msgid "Types list navigation"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:122
+msgid "Update Medical Report"
+msgstr "Atualizar Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:201
+msgid "Update Type"
+msgstr ""
+
+#: admin/class-wp-medical-report-system-admin.php:133
+msgid "Uploaded to this Medical Report"
+msgstr "Upado nesse Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:131
+msgid "Use as featured image"
+msgstr "Usar como imagem destaque"
+
+#: admin/class-wp-medical-report-system-admin.php:123
+msgid "View Medical Report"
+msgstr "Ver Exame"
+
+#: admin/class-wp-medical-report-system-admin.php:124
+msgid "View Medical Reports"
+msgstr "Ver Exames"
+
+#: admin/class-wp-medical-report-system-admin.php:202
+msgid "View Type"
+msgstr ""
+
+#. Name of the plugin
+msgid "WP Medical Report System"
+msgstr "WP Sistema de Exames"

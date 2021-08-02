@@ -156,6 +156,8 @@ class Wp_Medical_Report_System {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', 					$plugin_admin, 'register_medical_reports', 0 );
+		$this->loader->add_action( 'init', 					$plugin_admin, 'register_tax_types', 10 );
 
 	}
 
@@ -170,8 +172,14 @@ class Wp_Medical_Report_System {
 
 		$plugin_public = new Wp_Medical_Report_System_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'wp_enqueue_scripts', 			$plugin_public, 'enqueue_styles' );
+		$this->loader->add_action( 'wp_enqueue_scripts', 			$plugin_public, 'enqueue_scripts' );
+		$this->loader->add_action( 'template_redirect', 			$plugin_public, 'js_vars' );
+		$this->loader->add_action( 'wp_ajax_upload_files', 			$plugin_public, 'upload_files' );
+		$this->loader->add_action( 'wp_ajax_nopriv_upload_files', 	$plugin_public, 'upload_files' );
+
+		$this->loader->add_shortcode( 'actions-exame', 			$plugin_public, 'actions_exame' );
+		$this->loader->add_shortcode( 'add-medical-reports', 	$plugin_public, 'add_medical_reports' );
 
 	}
 
