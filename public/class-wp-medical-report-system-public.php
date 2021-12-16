@@ -120,10 +120,24 @@ class Wp_Medical_Report_System_Public {
 	public function add_medical_reports() {
 
 		?>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-1" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+		  <path d="M12 16v-8l-2 2" />
+		  <circle cx="12" cy="12" r="9" />
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-2" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+		  <path d="M10 10a2 2 0 1 1 4 0c0 .591 -.417 1.318 -.816 1.858l-3.184 4.143l4 -.001" />
+		  <circle cx="12" cy="12" r="9" />
+		</svg>
+		<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-3" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+		  <path d="M12 12a2 2 0 1 0 -2 -2" />
+		  <path d="M10 14a2 2 0 1 0 2 -2" />
+		  <circle cx="12" cy="12" r="9" />
+		</svg>
 		<form action="<?= get_permalink( get_page_by_path( 'add-exame' ) ) ?>" method="POST">
 			<div class="form-group">
-				<label for="search_type"><?php _e( 'Exam Type', 'wp-medical-report-system' ); ?></label>
-				<span class="required">*</span>
 				<input type="text" id="search_type" placeholder="Buscar...">
 				<div class="search_type">
 					<?php
@@ -159,7 +173,7 @@ class Wp_Medical_Report_System_Public {
 			    <div class ="form-group">
 			        <label><?php _e( 'Files', 'wp-medical-report-system' ); ?></label><br />
 			        <small>Somente se já foi realizado.</small>
-			        <input type="file" name="files[]" accept="image/*,.pdf" class="files-data form-control" multiple />
+			        <input type="file" name="files[]" accept="image/*,.pdf" class="files-data form-control" multiple /><br />
 			        <small>Clique no botão abaixo para continuar.</small>
 			    </div>
 			    <div class="upload-response"></div>
