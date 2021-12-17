@@ -103,16 +103,24 @@ class Wp_Medical_Report_System_Public {
 
 	}
 
-	public function actions_exame() {
+	public function actions_exame( $atts ) {
 
-		$id = get_the_ID();
+		$a = shortcode_atts( array(
+			'id' => 0,
+			'url_exame' => '',
+		), $atts );
+
+		$id = $a['id'];
+		$url_exame = $a['url_exame'];
 
 		?>
-		<select class="action-exame"> data-id="<?= $id ?>">
-			<option><?php _e( '-- select --', 'wp-medical-repost-system' ); ?></option>
-			<option value="view"><?php _e( 'View', 'wp-medical-repost-system' ); ?></option>
-			<option value="edit"><?php _e( 'Edit', 'wp-medical-repost-system' ); ?></option>
-			<option value="delete"><?php _e( 'Delete', 'wp-medical-repost-system' ); ?></option>
+		<select class="action-exame" data-id="<?= $id ?>" data-url="<?= $url_exame ?>">
+			<option></option>
+			<option value="info"><?php _e( 'Abrir Informações', 'wp-medical-repost-system' ); ?></option>
+			<option value="view"><?php _e( 'Visualizar Exame', 'wp-medical-repost-system' ); ?></option>
+			<option value="hist"><?php _e( 'Histórico do Exame', 'wp-medical-repost-system' ); ?></option>
+			<option value="edit"><?php _e( 'Editar', 'wp-medical-repost-system' ); ?></option>
+			<option value="delete"><?php _e( 'Excluir', 'wp-medical-repost-system' ); ?></option>
 		</select>
 		<?php
 	}

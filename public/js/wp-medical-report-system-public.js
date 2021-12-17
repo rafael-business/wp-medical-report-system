@@ -43,6 +43,22 @@
 
 	        
 	    });
+
+		$('body').on( 'change', '.action-exame', function(e){
+
+	        let value = e.target.options[e.target.selectedIndex].value;
+			console.log( value );
+
+			switch ( value ) {
+
+				case 'view':
+					window.open( e.target.dataset.url );
+					break;
+			
+				default:
+					break;
+			}
+	    });
 	});
 
 })(jQuery);
