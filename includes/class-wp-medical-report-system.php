@@ -154,10 +154,14 @@ class Wp_Medical_Report_System {
 
 		$plugin_admin = new Wp_Medical_Report_System_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->add_action( 'init', 					$plugin_admin, 'register_medical_reports', 0 );
-		$this->loader->add_action( 'init', 					$plugin_admin, 'register_tax_types', 10 );
+		$this->loader->add_action( 'admin_enqueue_scripts', 	$plugin_admin, 'enqueue_styles' );
+		$this->loader->add_action( 'admin_enqueue_scripts', 	$plugin_admin, 'enqueue_scripts' );
+		$this->loader->add_action( 'init', 						$plugin_admin, 'register_medical_reports', 0 );
+		$this->loader->add_action( 'init', 						$plugin_admin, 'register_tax_types', 10 );
+		$this->loader->add_action( 'show_user_profile', 		$plugin_admin, 'user_info_adicional' );
+		$this->loader->add_action( 'edit_user_profile', 		$plugin_admin, 'user_info_adicional' );
+		$this->loader->add_action( 'personal_options_update', 	$plugin_admin, 'save_user_info_adicional' );
+		$this->loader->add_action( 'edit_user_profile_update', 	$plugin_admin, 'save_user_info_adicional' );
 
 	}
 

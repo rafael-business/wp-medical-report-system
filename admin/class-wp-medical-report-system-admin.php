@@ -226,4 +226,44 @@ class Wp_Medical_Report_System_Admin {
 
 	}
 
+	//Cria uma nova sessão no perfil do usuário
+	public function user_info_adicional( $user ) { ?>
+	
+		<h3>Informações Adicionais</h3>
+		<table class="form-table">
+			<tr>
+				<th><label for="imagem">URL da Imagem</label></th>
+				<td>
+					<input type="text" name="imagem" id="imagem" value="<?php echo esc_attr( get_the_author_meta( 'imagem', $user->ID ) ); ?>" class="regular-text" /><br />
+					<span class="description">URL da imagem que sairá no PDF. Será a Logo para Clientes, e a assinatura para Laudistas.</span>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="empregador">Empregador</label></th>
+				<td>
+					<input type="text" name="empregador" id="empregador" value="<?php echo esc_attr( get_the_author_meta( 'empregador', $user->ID ) ); ?>" class="regular-text" /><br />
+					<span class="description">Email do cliente que adicionou o técnico.</span>
+				</td>
+			</tr>
+			<tr>
+				<th><label for="bloqueio">Bloqueio</label></th>
+				<td>
+					<input type="text" name="bloqueio" id="bloqueio" value="<?php echo esc_attr( get_the_author_meta( 'bloqueio', $user->ID ) ); ?>" class="regular-text" /><br />
+					<span class="description">Status do cliente.</span>
+				</td>
+			</tr>
+		</table>
+	<?php }
+
+	//Salva os Campos Adicionais
+	function save_user_info_adicional( $user_id ) {
+
+		if ( !current_user_can( 'edit_user', $user_id ) )
+			return false;
+
+		update_usermeta( $user_id, 'imagem', $_POST['imagem'] );
+		update_usermeta( $user_id, 'empregador', $_POST['empregador'] );
+		update_usermeta( $user_id, 'bloqueio', $_POST['bloqueio'] );
+	}
+
 }
