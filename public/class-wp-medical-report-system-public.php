@@ -145,7 +145,10 @@ class Wp_Medical_Report_System_Public {
 		  <circle cx="12" cy="12" r="9" />
 		</svg>
 		<form action="<?= get_permalink( get_page_by_path( 'add-exame' ) ) ?>" method="POST">
-			<div class="form-group">
+			<div id="add-ex-step-1" class="form-group step-group">
+				<label for="search_type"><?php _e( 'Selecione um tipo de Exame', 'wp-medical-report-system' ); ?></label>
+				<span class="required">*</span>
+				<small>Use o campo de busca abaixo para procurar.</small>
 				<input type="text" id="search_type" placeholder="Buscar...">
 				<div class="search_type">
 					<?php
@@ -171,30 +174,82 @@ class Wp_Medical_Report_System_Public {
 					}
 					?>
 				</div>
+				<?php $this->get_btn_next(); ?>
 			</div>
-			<div class="form-group">
+			<div id="add-ex-step-2" class="form-group step-group">
 				<label for="publish_date"><?php _e( 'Exam Date', 'wp-medical-report-system' ); ?></label>
 				<span class="required">*</span>
-				<input type="datetime-local" id="publish_date" name="publish_date" required>
+				<input 
+					type="datetime-local" 
+					id="publish_date" 
+					name="publish_date" 
+					required
+				>
+				<small>Se você está fazendo um agendamento, escolha a data e o horário em que o paciente fará o exame.</small>
+				<?php $this->get_btns_arrows(); ?>
 			</div>
-			<div class="upload-form">
+			<div id="add-ex-step-3" class="upload-form step-group">
 			    <div class ="form-group">
-			        <label><?php _e( 'Files', 'wp-medical-report-system' ); ?></label><br />
-			        <small>Somente se já foi realizado.</small>
+			        <label><?php _e( 'Arquivos dos Exames', 'wp-medical-report-system' ); ?></label><br />
+			        <small>Somente se já foi realizado. Se você está fazendo um agendamento, ainda não é hora de carregá-los.</small>
 			        <input type="file" name="files[]" accept="image/*,.pdf" class="files-data form-control" multiple /><br />
-			        <small>Clique no botão abaixo para continuar.</small>
+			        <small>Clique em "Salvar" para continuar.</small>
 			    </div>
 			    <div class="upload-response"></div>
-			    <button class="button is-success is-fullwidth py-5 btn-upload">
-					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-					  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-					  <path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
-					  <circle cx="12" cy="14" r="2" />
-					  <polyline points="14 4 14 8 8 8 8 4" />
-					</svg>
-				</button>
+				<div class="btns-arrows">
+					<?php $this->get_btn_previous(); ?>
+					<button class="button is-success is-fullwidth py-5 btn-upload">
+						<div class="text">Salvar</div>
+						<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-floppy" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+						<path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2" />
+						<circle cx="12" cy="14" r="2" />
+						<polyline points="14 4 14 8 8 8 8 4" />
+						</svg>
+					</button>
+				</div>
 			</div>
 		</form>
+		<?php
+	}
+
+	public function get_btns_arrows() {
+
+		?>
+		<div class="btns-arrows">
+			<?php $this->get_btn_previous(); ?>
+			<?php $this->get_btn_next(); ?>
+		</div>
+		<?php
+	}
+
+	public function get_btn_previous() {
+
+		?>
+		<button class="button is-warning is-fullwidth py-5 btn-previous">
+			<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-up-left" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+				<line x1="7" y1="7" x2="17" y2="17" />
+				<polyline points="16 7 7 7 7 16" />
+			</svg>
+			<div class="text">Voltar</div>
+		</button>
+		<?php
+	}
+
+	public function get_btn_next() {
+
+		?>
+		<button class="button is-info is-fullwidth py-5 btn-next" disabled>
+				<div class="text">Prosseguir</div>
+				<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-bar-right" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+					<line x1="20" y1="12" x2="10" y2="12" />
+					<line x1="20" y1="12" x2="16" y2="16" />
+					<line x1="20" y1="12" x2="16" y2="8" />
+					<line x1="4" y1="4" x2="4" y2="20" />
+				</svg>
+			</button>
 		<?php
 	}
 
